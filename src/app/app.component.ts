@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'concept';
+  dataFromChild = 'Data Send To Child From Parent';
+
+  changeData() {
+    this.dataFromChild = 'Child data change';
+  }
 }
