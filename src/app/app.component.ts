@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'concept';
+  data : string = 'Default Data';
+
+  updateData(data:string) {
+    this.data = data;
+    console.log('Data From Child : ', data);
+  }
 }
