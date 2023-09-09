@@ -1,3 +1,2 @@
-<h1>Send Data From Parent To Child</h1>
-<h5>Data From Child : {{data}}</h5><br>
-<app-child (updateDataEvent)="updateData($event)"></app-child>
+<h4>Data From Child : {{dataFromChild}}</h4>
+<app-child (dataFromChild)="accpetChildData($event)"></app-child>

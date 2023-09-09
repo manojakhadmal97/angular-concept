@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'concept';
-  data : string = 'Default Data';
+  dataFromChild : string = 'Waiting for data......';
 
-  updateData(data:string) {
-    this.data = data;
-    console.log('Data From Child : ', data);
+  accpetChildData(data:string) {
+    this.dataFromChild = data;
   }
 }
