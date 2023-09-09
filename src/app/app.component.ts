@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'concept';
-  dataFromChild = 'Data Send To Child From Parent';
+  title = "How to send data from parent to child";
+  data = 'Default Data';
 
-  changeData() {
-    this.dataFromChild = 'Child data change';
+  sendDataToChild() {
+    this.data = "It's a child Data";
   }
 }

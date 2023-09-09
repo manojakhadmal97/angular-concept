@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ChildComponent {
-  @Input() data = "Default Value";
+  @Input() dataFromParent = "Default Child Data";
 }

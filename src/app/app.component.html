@@ -1,3 +1,3 @@
-<h1>Send Data From Parent To Child</h1>
-<app-child [data]="dataFromChild"></app-child>
-<button (click)="changeData()">Change Child Data</button>
+<h1>{{title}}</h1>
+<app-child [dataFromParent]="data"></app-child>
+<button (click)="sendDataToChild()">Send Data To Child</button>
