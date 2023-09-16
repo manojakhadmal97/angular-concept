@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ChildComponent } from './child/child.component';
 
 @Component({
@@ -12,11 +12,13 @@ export class AppComponent implements AfterViewInit {
 
   @ViewChild(ChildComponent) childComp !: ChildComponent;
 
-  constructor() {
+  constructor(private cd : ChangeDetectorRef) {
 
   }
 
   ngAfterViewInit(): void {
+    this.dataFromChild = this.childComp.childData;
+    this.cd.detectChanges();
     console.log('Child Data : ', this.childComp.childData);
   }
 
